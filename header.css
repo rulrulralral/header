@@ -1,0 +1,103 @@
+*{
+    box-sizing: border-box; 
+    /* 박스 사이즈는 무조건 보더 박스 사이즈로 한다. */
+
+}
+ul{
+    list-style: none; 
+    /* li 태그의 불릿을 없애준다 */
+    padding-left: 0;
+
+}
+
+body{
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    /* 배치 이상한거 가로로 띄워주게 만들어 줌  */
+    align-items: center;
+    padding: 8px 12px;
+    background-color: #263343;
+
+}
+.navbar__menu{
+    display: flex;
+}
+
+.navbar__log {
+    color:tomato;
+}
+
+.navbar__log a{
+    color:white;
+}
+.navbar__icon{
+    display: flex;
+}
+
+.navbar__menu li:hover{
+    background-color: wheat;
+    border-radius: 4px;
+}
+.navbar__menu li:active{
+    transform: scale(0.9);
+}
+.navbar__menu a{
+    color:white;
+}
+.navbar__log{
+    font-size: 24px;
+}
+.navbar__icon i{
+    color:wheat;
+}
+.navbar__menu li{
+    padding: 8px 12px;
+}
+
+.navbar__icon li{
+    padding: 8px 12px;
+}
+/* 평소에 햄버거 버튼을 숨겨둿다가 */
+.navbar__ham{
+    display: none;
+}
+
+@media screen and (max-width: 768px){
+    nav{
+        flex-direction: column;
+        align-items: flex-start;
+    }  
+    .navbar__menu{
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        display: none;
+    }
+    
+    .navbar__icon{
+        width: 100%;
+        justify-content: center;
+        display: none;
+    }
+    
+    /* 768px 이상일때는 안보이게 함 그 이하는 보이게 함 */
+    .navbar__ham{
+        display: block;
+        position: absolute;
+        right: 32px;
+        top: 10px;
+        color: thistle;
+    }
+    
+}
+
+.active{
+    display: flex;
+
+}
